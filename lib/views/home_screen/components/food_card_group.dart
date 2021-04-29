@@ -54,6 +54,32 @@ class _FoodCardGroupState extends State<FoodCardGroup> {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              FoodCardSmall(
+                txt: 'Steak',
+                foodImage: 'assets/images/food 4.png',
+              ),
+              FoodCardSmall(
+                txt: 'Steak',
+                foodImage: 'assets/images/food 4.png',
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          child: FoodCardWide(
+            txt: 'Steak',
+            foodImage: 'assets/images/food 4.png',
+          ),
+        ),
+        SizedBox(
+          height: 70,
+        )
       ],
     );
   }

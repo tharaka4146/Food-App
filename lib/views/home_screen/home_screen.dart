@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
               )),
             ),
             Positioned(
-              top: screenHeight * 0.06,
+              top: screenHeight * 0.05,
               child: Container(
                 width: screenWidth,
                 child: Padding(
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 90, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 80, 0, 0),
               child: SingleChildScrollView(
                 child: Container(
                   width: screenWidth,
@@ -97,6 +97,32 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.fromLTRB(60, 10, 60, 10),
+        child: ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+          child: BottomNavigationBar(
+            backgroundColor: Colors.black,
+            selectedItemColor: Colors.white,
+            unselectedItemColor: Colors.white.withOpacity(0.6),
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            type: BottomNavigationBarType.fixed,
+            items: [
+              BottomNavigationBarItem(label: 'home', icon: Icon(Icons.home)),
+              BottomNavigationBarItem(
+                  label: 'fav', icon: Icon(Icons.favorite_border)),
+              BottomNavigationBarItem(
+                  label: 'notifications',
+                  icon: Icon(Icons.notifications_none_outlined)),
+              BottomNavigationBarItem(
+                  label: 'profile', icon: Icon(Icons.person_outline_rounded)),
+            ],
+          ),
+        ),
+      ),
+      // extendBodyBehindAppBar: true,
+      extendBody: true,
     );
   }
 }

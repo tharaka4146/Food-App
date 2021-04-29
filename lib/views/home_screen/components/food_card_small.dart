@@ -6,9 +6,11 @@ class FoodCardSmall extends StatefulWidget {
     Key key,
     this.txt,
     this.foodImage,
+    this.txt2,
   }) : super(key: key);
 
   final String txt;
+  final String txt2;
   final String foodImage;
 
   @override
@@ -42,12 +44,38 @@ class _CardState extends State<FoodCardSmall> {
                   widget.foodImage,
                 ),
               ),
+              Center(
+                child: Text(
+                  widget.txt,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w800,
+                    // color: Colors.white,
+                    // fontFamily:
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Text(
+                  'lorem ipsum dolor',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.black45,
+                    // fontFamily:
+                  ),
+                ),
+              ),
               Text(
-                widget.txt,
+                r"$ 12.00",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w800,
-                  // color: Colors.white,
+                  // color: Colors.black45,
                   // fontFamily:
                 ),
               ),
