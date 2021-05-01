@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 
 class Tag extends StatefulWidget {
   Tag({
-    Key key,
     @required this.txt,
-  }) : super(key: key);
+  });
 
   final String txt;
 

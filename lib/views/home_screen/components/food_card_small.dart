@@ -1,16 +1,18 @@
+import 'package:app/views/food_item/food_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FoodCardSmall extends StatefulWidget {
   FoodCardSmall({
-    Key key,
-    this.txt,
-    this.foodImage,
-    this.txt2,
-  }) : super(key: key);
+    @required this.txt,
+    @required this.foodImage,
+    @required this.txt2,
+    @required this.price,
+  });
 
   final String txt;
   final String txt2;
+  final String price;
   final String foodImage;
 
   @override
@@ -24,6 +26,12 @@ class _CardState extends State<FoodCardSmall> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => FoodItem()),
+        );
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0),
         child: Container(
@@ -59,7 +67,7 @@ class _CardState extends State<FoodCardSmall> {
               Padding(
                 padding: const EdgeInsets.all(5),
                 child: Text(
-                  'lorem ipsum dolor',
+                  widget.txt2,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 12,
@@ -70,7 +78,7 @@ class _CardState extends State<FoodCardSmall> {
                 ),
               ),
               Text(
-                r"$ 12.00",
+                widget.price,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 15,

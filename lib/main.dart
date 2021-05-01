@@ -1,3 +1,4 @@
+import 'package:app/views/food_item/food_item.dart';
 import 'package:app/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: SplashScreen(),
+      // home: FoodItem(),
     );
   }
 }

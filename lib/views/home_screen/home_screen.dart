@@ -7,7 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key key}) : super(key: key);
+  // HomeScreen({required Key key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
